@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:ContactAppXamarin.Helpers"
+             x:Class="ContactAppXamarin.NewPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:BytesToImageSourceConverter x:Key="BytesToImageConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Nombres" />
+            <Frame CornerRadius="10" BorderColor="Gray" Padding="0" BackgroundColor="White">
+                <Entry Keyboard="Text" Placeholder="Ingrese sus nombres"  Text="{Binding Contacto.Nombre}" Style="{StaticResource NoUnderlineEntryStyle}"/>
+            </Frame>
+
+            <Label Text="Apellidos" />
+            <Frame CornerRadius="10" BorderColor="Gray" Padding="0" BackgroundColor="White">
+                <Entry Keyboard="Text" Placeholder="Ingrese sus apellidos" Text="{Binding Contacto.Apellido}" Style="{StaticResource NoUnderlineEntryStyle}"/>
+            </Frame>
+
+            <Label Text="Teléfono" />
+            <Frame CornerRadius="10" BorderColor="Gray" Padding="0" BackgroundColor="White">
+                <Entry Keyboard="Telephone" Placeholder="Ingrese su teléfono" Text="{Binding Contacto.Telefono}" Style="{StaticResource NoUnderlineEntryStyle}"/>
+            </Frame>
+
+            <Label Text="Número celular" />
+            <Frame CornerRadius="10" BorderColor="Gray" Padding="0" BackgroundColor="White">
+                <Entry Keyboard="Telephone" Placeholder="Ingrese su número celular" Text="{Binding Contacto.Celular}" Style="{StaticResource NoUnderlineEntryStyle}"/>
+            </Frame>
+
+            <Label Text="Fotografía" />
+            <StackLayout>
+                <Image x:Name="fotoImage" Source="{Binding Foto, Converter={StaticResource BytesToImageConverter}}" WidthRequest="100" HeightRequest="100" />
+                <Button Text="Cargar Fotografía" Command="{Binding CargarFotoCommand}" />
+            </StackLayout>
+            <Button Text="Guardar" Command="{Binding GuardarCommand}" BackgroundColor="#FF5252" TextColor="#FFFFFF" CornerRadius="8" />
+
+        </StackLayout>
+
+    </ContentPage.Content>
+
+
+</ContentPage>

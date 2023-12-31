@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:ContactAppXamarin.Helpers"
+             x:Class="ContactAppXamarin.FetchPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:BytesToImageSourceConverter x:Key="BytesToImageConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label x:Name="Titulo" Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        
+        <ListView x:Name="ListContact" HasUnevenRows="True" ItemSelected="ListContact_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10">
+                            
+                            <!-- Datos a la derecha -->
+                            <StackLayout HorizontalOptions="Start" Margin="10,0,0,0">
+                                <Label Text="{Binding Nombre, StringFormat='Nombre: {0}'}" FontAttributes="Bold" />
+                                <Label Text="{Binding Apellido, StringFormat='Apellido: {0}'}" />
+                                <Label Text="{Binding Telefono, StringFormat='Teléfono: {0}'}" />
+                                <!-- Agrega aquí otros datos si los tienes -->
+                            </StackLayout>
+                            <!-- Foto a la izquierda -->
+                            <Image Source="{Binding Foto, Converter={StaticResource BytesToImageConverter}}" 
+                                WidthRequest="50" HeightRequest="50" HorizontalOptions="EndAndExpand" />
+
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackLayout VerticalOptions="End" HorizontalOptions="FillAndExpand" Orientation="Horizontal" Padding="10">
+            <Button Text="Cerrar Sesión" Clicked="CerrarSesion_Clicked"  HorizontalOptions="FillAndExpand" BackgroundColor="#FF5252" TextColor="#FFFFFF" CornerRadius="8" />
+            
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>

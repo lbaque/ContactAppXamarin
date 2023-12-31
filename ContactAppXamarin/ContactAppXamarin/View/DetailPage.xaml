@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:ContactAppXamarin.Helpers"
+             x:Class="ContactAppXamarin.DetailPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:BytesToImageSourceConverter x:Key="BytesToImageConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20">
+                <Image Source="{Binding Contacto.Foto, Converter={StaticResource BytesToImageConverter}}"
+                       WidthRequest="150" HeightRequest="150" HorizontalOptions="Center" />
+
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Nombre:" Grid.Row="0" Grid.Column="0" FontAttributes="Bold" />
+                    <Label Text="{Binding Contacto.Nombre}" Grid.Row="0" Grid.Column="1" />
+
+                    <Label Text="Apellido:" Grid.Row="1" Grid.Column="0" FontAttributes="Bold" />
+                    <Label Text="{Binding Contacto.Apellido}" Grid.Row="1" Grid.Column="1" />
+
+                    <Label Text="Teléfono:" Grid.Row="2" Grid.Column="0" FontAttributes="Bold" />
+                    <Label Text="{Binding Contacto.Telefono}" Grid.Row="2" Grid.Column="1" />
+
+                    <Label Text="Celular:" Grid.Row="3" Grid.Column="0" FontAttributes="Bold" />
+                    <Label Text="{Binding Contacto.Celular}" Grid.Row="3" Grid.Column="1" />
+                </Grid>
+                <!-- Botones en la parte inferior -->
+                <StackLayout VerticalOptions="End" HorizontalOptions="FillAndExpand" Orientation="Horizontal" Padding="10">
+                    <Button Text="Editar" Command="{Binding EditarCommand}" HorizontalOptions="FillAndExpand"/>
+                    <Button Text="Eliminar" Command="{Binding EliminarCommand}" HorizontalOptions="FillAndExpand" Margin="10,0,0,0"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+        
+    </ContentPage.Content>
+
+</ContentPage>

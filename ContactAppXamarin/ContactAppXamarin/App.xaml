@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ContactAppXamarin.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!-- Definición de los colores -->
+            <Color x:Key="DarkPrimaryColor">#303F9F</Color>            
+            <Color x:Key="PrimaryColor">#3F51B5</Color>
+            <!-- Cambia el valor hex para el color primario -->
+            <Color x:Key="AccentColor">#FF4081</Color>
+            <!-- Cambia el valor hex para el color de acento -->
+            <Color x:Key="PrimaryText">#333333</Color>
+            <Color x:Key="SecondText">#757575</Color>
+            <Color x:Key="LightPrimaryColor">#C5CAE9</Color>
+            <Color x:Key="TextIcons">#FFFFFF</Color>
+            <Color x:Key="DividerColor">#BDBDBD</Color>
+            <!-- Cambia el valor hex para el color de texto -->
+
+            <!-- Estilo para la aplicación que usa los colores definidos -->
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{StaticResource DarkPrimaryColor}" />
+                <Setter Property="BarTextColor" Value="{StaticResource TextIcons}" />
+            </Style>
+            <Style TargetType="Entry" x:Key="NoUnderlineEntryStyle">
+                <Setter Property="BackgroundColor" Value="{StaticResource TextIcons}" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="Margin" Value="5" />
+                <Setter Property="PlaceholderColor" Value="{StaticResource DividerColor}" />
+                <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

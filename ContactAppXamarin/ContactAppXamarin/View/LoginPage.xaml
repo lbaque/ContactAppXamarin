@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ContactAppXamarin.View.LoginPage"
+             BackgroundColor="{StaticResource DarkPrimaryColor}"
+             xmlns:viewModels="clr-namespace:ContactAppXamarin.ViewModel"
+             BindingContext="{Binding Source={x:Static viewModels:Locator.LoginViewModel}}">
+    <ContentPage.Content>
+        
+        <StackLayout>
+            
+            <StackLayout Padding="40,80">
+                <Label Text="Iniciar Sesión" HorizontalTextAlignment="Center" FontSize="28" TextColor="{StaticResource TextIcons}" Margin="0,0,0,20" />
+
+                <Frame CornerRadius="10" BorderColor="Gray" Padding="0" BackgroundColor="White">
+                    <Entry Placeholder="Usuario" Keyboard="Text" Text="{Binding Usuario.User}" Style="{StaticResource NoUnderlineEntryStyle}"/>
+                </Frame>
+                <Frame CornerRadius="10" BorderColor="Gray" Padding="0" BackgroundColor="White">
+                    <Entry Placeholder="Contraseña" IsPassword="True"  Text="{Binding Usuario.Password}" Style="{StaticResource NoUnderlineEntryStyle}" />
+                </Frame>               
+
+                <Button Text="Iniciar Sesión" Command="{Binding LoginCommand}" BackgroundColor="#FF5252" TextColor="#FFFFFF" CornerRadius="8" />
+
+                <Label Text="¿No tienes cuenta? Regístrate" HorizontalTextAlignment="Center" TextColor="#FFFFFF" Margin="0,20,0,0" >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding RegisterCommand}" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+              
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+
+</ContentPage>
