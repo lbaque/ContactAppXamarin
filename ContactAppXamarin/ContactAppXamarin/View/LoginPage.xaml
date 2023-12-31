@@ -21,12 +21,7 @@
 
                 <Button Text="Iniciar Sesión" Command="{Binding LoginCommand}" BackgroundColor="#FF5252" TextColor="#FFFFFF" CornerRadius="8" />
 
-                <Label Text="¿No tienes cuenta? Regístrate" HorizontalTextAlignment="Center" TextColor="#FFFFFF" Margin="0,20,0,0" >
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding RegisterCommand}" />
-                    </Label.GestureRecognizers>
-                </Label>
-
+                
               
             </StackLayout>
         </StackLayout>
