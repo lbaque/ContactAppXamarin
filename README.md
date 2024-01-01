@@ -18,6 +18,7 @@
   /*-----------------APP-----------------*/
   * Instalar emulador de android (Genymotion) o hacer uso de un dispositivo físico.
   * Conectar el dispositivo físico a la red local para que pudo hacer uso del AIP (backend).
+  * Cambiar la url del api en el archivo IHttpClientUris ubicacion en ContactAppXamarin/Services/IHttpClientUris.cs
   * Verificar a través del navegador del dispositivo que sea visible el api.
  
 * ¿Cómo decidió las opciones técnicas y arquitectónicas utilizadas como parte de su 
