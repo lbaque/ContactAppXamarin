@@ -56,6 +56,11 @@ Haría uso de token de autenticación para el acceso y seguridad de las apis y e
 
 ![WhatsApp Image 2024-01-01 at 3 54 49 PM (1)](https://github.com/lbaque/ContactAppXamarin/assets/22845156/f250b1bc-292d-494c-8bc7-3cc6c09bef62)
 
+Credenciales de acceso
+User: mcastro Pass: mcastro
+User: ayoung Pass: ayoung
+User: dtigua Pass: dtigua
+
 
 
 
