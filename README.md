@@ -50,8 +50,6 @@ Haría uso de token de autenticación para el acceso y seguridad de las apis y e
 
 ![WhatsApp Image 2024-01-01 at 3 55 57 PM](https://github.com/lbaque/ContactAppXamarin/assets/22845156/961f29bf-2348-42a7-a333-c9898fc7a00e)
 
-![WhatsApp Image 2024-01-01 at 3 54 49 PM](https://github.com/lbaque/ContactAppXamarin/assets/22845156/5d74c190-5ad5-48c0-8b51-855da121a93e)
-
 ![WhatsApp Image 2024-01-01 at 3 54 50 PM](https://github.com/lbaque/ContactAppXamarin/assets/22845156/c17b66a3-00e0-440d-935a-62802739f136)
 
 ![WhatsApp Image 2024-01-01 at 3 54 49 PM (1)](https://github.com/lbaque/ContactAppXamarin/assets/22845156/f250b1bc-292d-494c-8bc7-3cc6c09bef62)
